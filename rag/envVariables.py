@@ -1,7 +1,11 @@
-import getpass
+from dotenv import load_dotenv
 import os
 
-os.environ["LANGSMITH_TRACING"] = "true"
-os.environ["LANGSMITH_API_KEY"] = getpass.getpass()
+# Load environment variables from .env file
+load_dotenv()
 
-os.environ["GOOGLE_API_KEY"] =""
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
+LANGSMITH_API_KEY = os.getenv("LANGSMITH_API_KEY")
+LANGSMITH_TRACING = os.getenv("LANGSMITH_TRACING")
+MONGODB_COLLECTION = os.getenv("MONGODB_COLLECTION")
+ATLAS_VECTOR_SEARCH_INDEX_NAME = os.getenv("ATLAS_VECTOR_SEARCH_INDEX_NAME")
