@@ -1,7 +1,9 @@
 from langchain_community.document_loaders import PyPDFLoader
+from rag.vectorDb import vector_store
 
-file_path = "../documents/demo.pdf"
+file_path = "./documents/demo.pdf"
 loader = PyPDFLoader(file_path)
 
 docs = loader.load()
-print(docs[0].page_content)
+
+result = vector_store.add_documents(docs)

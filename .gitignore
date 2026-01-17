@@ -2,6 +2,8 @@
 documents/*
 .env
 
+.cursor
+
 .idea
 .ipynb_checkpoints
 .mypy_cache
