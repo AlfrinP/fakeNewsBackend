@@ -27,16 +27,16 @@ prompt = (
 agent = create_agent(model, tools, system_prompt=prompt)
 
 
-query = (
-    "A viral message claims that aftermarket LED headlights, underbody neon lights, "
-    "and modified exhausts are now fully legal in Kerala without any approval from MVD.\n\n"
-    "Verify whether this claim is true or fake using official vehicle modification rules. "
-    "Provide a clear verdict and justification."
-)
+# query = (
+#     "A viral message claims that aftermarket LED headlights, underbody neon lights, "
+#     "and modified exhausts are now fully legal in Kerala without any approval from MVD.\n\n"
+#     "Verify whether this claim is true or fake using official vehicle modification rules. "
+#     "Provide a clear verdict and justification."
+# )
 
 
-for event in agent.stream(
-    {"messages": [{"role": "user", "content": query}]},
-    stream_mode="values",
-):
-    event["messages"][-1].pretty_print()
+# for event in agent.stream(
+#     {"messages": [{"role": "user", "content": query}]},
+#     stream_mode="values",
+# ):
+#     event["messages"][-1].pretty_print()

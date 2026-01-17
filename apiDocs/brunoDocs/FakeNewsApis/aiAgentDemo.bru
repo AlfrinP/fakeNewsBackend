@@ -1,0 +1,23 @@
+meta {
+  name: aiAgentDemo
+  type: http
+  seq: 1
+}
+
+post {
+  url: http://127.0.0.1:8000/verify-news
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "news": "A viral message claims that aftermarket LED headlights, underbody neon lights, and modified exhausts are now fully legal in Kerala without any approval from MVD.\n\nVerify whether this claim is true or fake using official vehicle modification rules. Provide a clear verdict and justification."
+  }
+  
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}
